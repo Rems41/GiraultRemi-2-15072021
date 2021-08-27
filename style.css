@@ -21,7 +21,7 @@ a{
 .logo{
     grid-area: logo;
     height: 2.8rem;
-    padding: 0 10px;
+    padding: 0 2rem;
 }
 .header-nav{
     display: flex;
@@ -86,60 +86,89 @@ a{
 .search-block{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 10px;
-    margin-bottom: 20px;
+    
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 h1{
-    font-size: 1.2em;
+    font-size: 1.4em;
+}
+.intro span{
+    font-size: 1.03em;
 }
 
 h2{
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
-form{
+.search-form{
     display: inline-flex;
-    height: 45px;
-    width: 415px;
+    max-width: 100%;
+    overflow: auto;
     margin-top: 10px;
 }
 .search-icon{
-    background-color: #f1efef;
-    padding: 10px 10px 0px 10px;
-    border-radius: 10px 0px 0px 10px;
+    background-color: #F2F2F2;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
 }
 .search-icon i{
-    color: black; 
-    padding: 0px 10px 0px 10px; 
+    color: black;
+    font-weight: 900;
 }
-#site-search{
-    border-top: #F2F2F2 solid 1px;
-    border-bottom: #F2F2F2 solid 1px ;
-    border-left: none;
+.search-input{
     border-right: none;
-    font-weight: bold;
+    border-left: none;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 0 1.5rem;
     box-sizing: border-box;
-    padding-left: 10px;
+    width: 14rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Raleway" , sans-serif;
 }
-button{
+.search-submit{
     background-color: #0065FC;
     color: white;
-    width: 133px;
-    border-radius: 0px 10px 10px 0px;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1.5rem;
+    font-family: "Raleway" , "sans serif";
+    cursor: pointer;
+}
+
+@media screen and (max-width : 600px){
+    .search-form{
+        display: flex;
+        width: 100%;
+    }
+    .search-input{
+        flex: 1;
+    }
+    .search-txt{
+        display: none;
+    }
+    button i{
+        color: white;
+    }
+}
+
+@media screen and (min-width : 601px){
+    
 }
 /*  Search 2ème partie :Filtres */
 
 .filter{
     display: flex;
-    width: 100%;
     margin-top: 32px;
-}
-
-.filter-title{
-    margin-top: 8px;
-    margin-left: 10px;
+    flex-wrap: wrap;
 }
 .btn{
     display: flex;
@@ -151,9 +180,9 @@ button{
 .filter-icon{
     display: flex;
     background-color: #DEEBFF;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem; 
     justify-content: center;
     align-items: center;
 }
@@ -161,13 +190,16 @@ button{
 .filter-btn{
     display: flex;
     align-items: center;
-    border: 2px solid #F2F2F2 ; 
+    border: 2px solid #d9d9d9 ; 
     margin-right: 32px;
     margin-bottom: 16px;
-    border-radius: 20px;  
+    border-radius: 32px; 
+    cursor: pointer; 
+    font-weight: bold;
 }
 .filter-btn:hover{
     box-shadow: 1px 1px 5px #0065FC;
+    transform: scale(1.050);
 }
 .icon-title{
     margin: 0px 16px;
@@ -175,27 +207,31 @@ button{
 
 i{
     color: #0065FC;
+    font-weight: 900;
 }
 
 .search-result{
     display: flex; 
-    margin-top: 20px;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+    
 }
 
 .result-txt{
     margin:0;
-    padding-top: 10px;
-    padding-left: 5px;
 }
-.result-icon i{
-    padding-right: 0px;
+.result-icon {
+    border: 1px solid #d9d9d9;
+    margin-right: 1rem;
     display: flex;
-    background-color: #DEEBFF;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
     justify-content: center;
     align-items: center;
+}
+.result-icon i{
+    font-weight: 900;
 }
 
 /*Main*/
@@ -511,13 +547,6 @@ footer ul{
 
 @media screen and (max-width:755px) {
 
-    button{
-        width: 50px;
-    }
-
-    nav a:hover{
-        border-top: none;  
-    }
     .bed-grid{
         display: grid;
         grid-template-columns: repeat(2,1fr);
