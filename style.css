@@ -181,8 +181,8 @@ h2{
     display: flex;
     background-color: #DEEBFF;
     border-radius: 100%;
-    height: 3rem;
-    width: 3rem; 
+    height: 2.5rem;
+    width: 2.5rem; 
     justify-content: center;
     align-items: center;
 }
@@ -191,7 +191,7 @@ h2{
     display: flex;
     align-items: center;
     border: 2px solid #d9d9d9 ; 
-    margin-right: 32px;
+    margin-right: 1.15rem;
     margin-bottom: 16px;
     border-radius: 32px; 
     cursor: pointer; 
@@ -252,6 +252,7 @@ i{
     border-radius: 1.5rem;
     padding: 2rem;
     margin-left: 30px;
+    margin-right: 30px;
 }
 .bed-grid, .room-grid{
     background-color: #F2F2F2;
@@ -325,6 +326,7 @@ i{
     row-gap: 2rem;
     align-items: start; 
     margin-right: 30px;
+    margin-left: 30px;
 }
 .title-room{
     display: flex;
@@ -372,22 +374,49 @@ i{
 .room-info{
     display: flex;
     flex-direction: column;
+    margin: 0;
+    margin-left: 10px;
 }
-.room-title{
-    margin: 0.25rem 0.75rem 0 0.75rem;
-}
-.room-price{
-    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+.room-title h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .room-notation{
     display: flex;
-    margin: 0 0.75rem 0.25rem 0.75rem;
+    margin-top: 20px;
 }
 .full i{
     font-size: 0.77em;
 }
 .empty i{
     font-size: 0.77em;
+}
+
+@media screen and (max-width:1210px){
+    .room-grid{
+        order:1;
+    }
+    .bed-grid{
+        order:2;
+    }
+    #bedroom{
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+    .room-grid{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto 10rem;
+        column-gap: 2rem;
+    }
+    .title-room{
+        grid-column: 1/-1;
+    }
+}
+@media screen and (max-width:1000px){
+    .room-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3,9rem);
+    }
 }
 
 /*Activités*/
@@ -493,7 +522,9 @@ footer{
         padding: 0;
         margin: 16px 0;
     }
-
+    .bed-grid{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
@@ -513,23 +544,7 @@ footer{
     #bedroom{
         flex-direction: column;
     }
-    .room-grid{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 1fr;
-    }
-    .room-card{
-        display: flex;
-    }
-    .room-card .img{
-        object-fit: cover;
-        padding: 5px 5px 5px 5px;
-    }
-    .room-info{
-        text-align: center;
-    }
-    .room-notation{
-        justify-content: center;
-    }
+    
     .bed-grid{
         padding-bottom: 30px;
         padding-right: 20px;
@@ -540,12 +555,6 @@ footer{
     }
 }
 
-@media screen and (max-width: 1090px) {
-
-        .room-grid{
-            grid-template-columns: repeat(2,1fr);
-        }
-}
     
 
 @media screen and (max-width:911px) {
@@ -570,9 +579,6 @@ footer{
     .bed{
         padding-right: 0px;
     }
-    .room{
-        width: 93%;
-    }
     footer{
         display: flex;
         justify-content: space-around;
@@ -584,7 +590,7 @@ footer{
     .bed-grid{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
+        grid-template-rows: auto repeat(3,1fr);
     }
     .grid-activities{
         display: grid;
@@ -593,15 +599,6 @@ footer{
         grid-template-areas: "zone1 zone2"
                              "zone3 zone4"
                              "zone5 zone6";
-    }
-    .room-grid{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr;
-    }
-    .room{
-        padding-right: 0px;
-        width: 90%;
     }
     .bed{
         padding-right: 0px;
@@ -624,7 +621,7 @@ footer{
     .bed-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows:auto repeat(6,1fr);
     }
     .bed{
         padding-left: 0px;
