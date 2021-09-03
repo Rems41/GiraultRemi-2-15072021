@@ -33,6 +33,7 @@ a{
 }
 .header-nav-link[data-active=true]{
     color: #0065FC;
+    border-top: 3px solid #0065FC;
 }
 .header-nav-link:hover{
     color: #0065FC;
@@ -43,7 +44,8 @@ a{
     grid-area: button;
     padding: 2rem;
     color: #0065FC;
-    font-weight: 600;
+    font-weight: bolder;
+    font-size: large;
 }
 @media screen and (min-width: 601px) {
     header{
@@ -75,6 +77,15 @@ a{
     }
     .header-nav-link:hover{
         border-bottom: 3px solid #0065FC;
+    }
+    .header-nav-link[data-active=true]{
+        border-top: none;
+        border-bottom: 3px solid #0065FC ;
+        font-weight: 600;
+    }
+    .header-nav-link[data-active=false]{
+        border-bottom: 3px solid #f8eeee;
+        font-weight: 600;
     }
 }
 
@@ -186,8 +197,8 @@ h2{
     display: flex;
     background-color: #DEEBFF;
     border-radius: 100%;
-    height: 2.5rem;
-    width: 2.5rem; 
+    height: 3rem;
+    width: 3rem; 
     justify-content: center;
     align-items: center;
 }
@@ -460,22 +471,28 @@ i{
     }
 
     .bed-grid a{
-            padding-left: 20px;
+        padding-left: 20px;
     }
     
-    .grid-activities{
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: repeat(6,200px);
-            grid-template-areas: "zone1"
-                                 "zone2"
-                                 "zone3"
-                                 "zone4"
-                                 "zone5"
-                                 "zone6"
-            ;
-            padding-left: 10px;
+    @media screen and (max-width: 400px) {
+    .room-grid{
+            margin-left: 0px;
+            margin-right: 0px;
+            border-radius: 0rem;
+            padding: 1rem;
+            row-gap: 0.5rem;
+        }
+    .title-room{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    .bed-grid{
+        background-color: white;
+        margin: 0;
+        padding: 10px 15px 10px 20px;
     }
+    }
+
 }
 
 /*Activités*/
@@ -511,8 +528,9 @@ a.card-activity:hover{
 .card-activity h2{
     font-weight: bolder;
     padding-left: 15px;
-    padding-top: 5px;
+    padding-top: 10px;
     font-size: 0.8em;
+    margin: 0;
 }
 a.card-activity-img1{
     grid-area: zone1;
@@ -587,7 +605,22 @@ a.card-activity-img6{
                              "zone5 zone6";
     }
     #activities{
-        margin-left: 20px;
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width:600px) {
+    .grid-activities{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6,200px);
+        grid-template-areas: "zone1"
+                             "zone2"
+                             "zone3"
+                             "zone4"
+                             "zone5"
+                             "zone6";
+        
+        padding-left: 10px;
     }
 }
 
