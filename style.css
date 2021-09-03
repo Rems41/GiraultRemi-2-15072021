@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;600;800;900&display=swap'); 
+
 body{
     font-family: "Raleway", sans-serif;
     max-width: 1440px;
@@ -64,9 +66,11 @@ a{
     }
     .logo{
         order: 0;
+        padding-left: 16px;
     }
     .header-signup{
         order: 1;
+        padding-right: 1rem;
     }
     .header-nav{
         order: 2;
@@ -82,10 +86,17 @@ a{
         border-top: none;
         border-bottom: 3px solid #0065FC ;
         font-weight: 600;
+        padding-top: 0;
+        padding-bottom: 1rem;
     }
     .header-nav-link[data-active=false]{
         border-bottom: 3px solid #f8eeee;
-        font-weight: 600;
+        font-weight: normal;
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    .header-nav-link:hover{
+        border-bottom: 3px solid #0065FC;
     }
 }
 
@@ -169,6 +180,10 @@ h2{
     .search-input{
         flex: 1;
     }  
+    h1{
+        line-height: 1.1;
+        font-size:1.3rem;
+    }
 }
 @media screen and (max-width:410px) {
     .search-input{
