@@ -263,6 +263,7 @@ i{
 
 .result-txt{
     margin:0;
+    font-size: small;
 }
 .result-icon {
     border: 1px solid #d9d9d9;
@@ -321,6 +322,7 @@ i{
 .bed-grid-title{
     grid-column: 1/-1;
     margin: 0;
+    font-weight: 700;
 }
 .bed-grid-title h1{
     margin: 0;
@@ -392,6 +394,7 @@ i{
     display: flex;
     justify-content: space-between;
     margin: 0;
+    font-weight: 700;
 }
 .title-room i{
     color: black;
@@ -440,6 +443,7 @@ i{
 .room-title h3{
     margin-top: 10px;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 .room-notation{
     display: flex;
