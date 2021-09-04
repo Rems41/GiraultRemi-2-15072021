@@ -167,6 +167,7 @@ h2{
     .search-form{
         display: flex;
         width: 100%;
+        margin-top: 2rem;
     }
     .search-txt{
         display: none;
@@ -175,21 +176,32 @@ h2{
         color: white;
        }
     .search-submit{
-        border-radius: 20px;
+        border-radius: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .search-input{
         flex: 1;
+        font-weight: 700;
     }  
     h1{
-        line-height: 1.1;
-        font-size:1.3rem;
+        font-size: 1.3em;
+        font-weight: 700;
     }
+    .intro h1{
+        margin-top: 2rem;
+    }
+    .intro span{
+        font-weight: normal;
+    }
+    .filter-title{
+        margin: 0;  
+    }  
 }
 @media screen and (max-width:410px) {
     .search-input{
         width: 10rem ;
     }
-}
 
 /*  Search 2ème partie :Filtres */
 
@@ -233,7 +245,7 @@ h2{
     transform: scale(1.050);
 }
 .icon-title{
-    margin: 0px 16px;
+    margin: 0px 10px;
     font-size: 1em;
 }
 
