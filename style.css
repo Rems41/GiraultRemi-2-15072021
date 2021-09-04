@@ -196,12 +196,13 @@ h2{
     }
     .filter-title{
         margin: 0;  
-    }  
+    } 
 }
-@media screen and (max-width:410px) {
+@media screen and (max-width : 410px){
     .search-input{
-        width: 10rem ;
+        width: 10rem;
     }
+}
 
 /*  Search 2ème partie :Filtres */
 
@@ -289,8 +290,7 @@ i{
 }
 @media screen and (max-width:400px) {
     .filter-btn{
-        margin-right: 3px;
-        
+        margin-right: 3px;   
     }
 }
 
@@ -375,8 +375,7 @@ i{
 }
 .more{
     font-weight: bold;
-    padding-left: 10px;
-     
+    padding-left: 10px;   
 }
 
 /*Les Plus Populaires*/
@@ -504,8 +503,8 @@ i{
     .bed-grid a{
         padding-left: 20px;
     }
-    
-    @media screen and (max-width: 400px) {
+}    
+@media screen and (max-width: 400px) {
     .room-grid{
             margin-left: 0px;
             margin-right: 0px;
@@ -522,9 +521,9 @@ i{
         margin: 0;
         padding: 10px 15px 10px 20px;
     }
-    }
-
 }
+
+
 
 /*Activités*/
 
@@ -552,14 +551,14 @@ a.card-activity{
     flex-direction: column;
     overflow: hidden;
     transition-duration: 0.2s;
+    padding-bottom: 10px;
 }
 a.card-activity:hover{
     transform: scale(1.05);
 }
 .card-activity h2{
     font-weight: bolder;
-    padding-left: 15px;
-    padding-top: 10px;
+    padding: 15px 0px 10px 15px;
     font-size: 0.8em;
     margin: 0;
 }
@@ -691,5 +690,9 @@ footer{
         width: 100%;
         padding: 0;
         margin: 16px 0;
+    }
+    .footer-list h2{
+        margin-top: 0px;
+        margin-bottom: 20px;
     }
 }
