@@ -549,14 +549,13 @@ a.card-activity{
     overflow: hidden;
     transition-duration: 0.2s;
     padding-bottom: 10px;
-    height: 12rem;
 }
 a.card-activity:hover{
     transform: scale(1.05);
 }
 .card-activity h2{
     font-weight: bolder;
-    padding: 15px 0px 10px 15px;
+    padding: 8px 0px 10px 15px;
     font-size: 0.8em;
     margin: 0;
 }
