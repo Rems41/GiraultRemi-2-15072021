@@ -614,13 +614,12 @@ a.card-activity-img6{
     #card-activities{
         display: block;
     }
-    #card-activity .small {
+    .card-activity .small{
         height: 80%;
     }
-    #card-activity .big{
+    .card-activity .big{
         height: 80%;
     }
-    
 }
 
 @media screen and (max-width:755px){
@@ -652,6 +651,9 @@ a.card-activity-img6{
     }
     a.card-activity{
         padding-bottom: 20px;
+    }
+    .card-activity .big{
+        height: 80%;
     }
 }
 
