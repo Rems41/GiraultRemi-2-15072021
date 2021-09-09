@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;600;800;900&display=swap'); 
-
 body{
     font-family: "Raleway", sans-serif;
     max-width: 1440px;
@@ -523,8 +522,6 @@ i{
     }
 }
 
-
-
 /*Activités*/
 
 #activities{
@@ -552,6 +549,7 @@ a.card-activity{
     overflow: hidden;
     transition-duration: 0.2s;
     padding-bottom: 10px;
+    height: 12rem;
 }
 a.card-activity:hover{
     transform: scale(1.05);
@@ -651,6 +649,9 @@ a.card-activity-img6{
                              "zone6";
         
         padding-left: 10px;
+    }
+    a.card-activity{
+        padding-bottom: 20px;
     }
 }
 
