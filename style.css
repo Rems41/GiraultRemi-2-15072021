@@ -555,7 +555,7 @@ a.card-activity:hover{
 }
 .card-activity h2{
     font-weight: bolder;
-    padding: 8px 0px 10px 15px;
+    padding: 20px 24px;
     font-size: 0.8em;
     margin: 0;
 }
@@ -571,6 +571,8 @@ a.card-activity-img3{
 a.card-activity-img4{
     grid-area: zone4;
 }
+
+
 a.card-activity-img5{
     grid-area: zone5;
 }
@@ -580,16 +582,15 @@ a.card-activity-img6{
 .card-activity img{
     border-radius: 10px 10px 0px 0px;
     display: block;
-    height: 90%;
     object-fit: cover;
 }
-.card-activity.big{
+.card-activity .big{
     height: 90%;
 }
-.card-activity.medium{
+.card-activity .medium{
     height: 80%;
 }
-.card-activity.small{
+.card-activity .small{
     height: 72%;
 }
 
